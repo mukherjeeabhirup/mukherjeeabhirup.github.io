@@ -1,0 +1,9 @@
+# Co-author metadata used by the publications page to link co-author names to their homepages.
+# Keys are last names, lower-cased and without accents; see docs/CUSTOMIZE.md ("Author annotation").
+# TODO: add entries once you have confirmed homepage URLs, e.g.
+# "khan":
+#   - firstname: ["Latifur", "L."]
+#     url: https://...
+# "thuraisingham":
+#   - firstname: ["Bhavani", "B."]
+#     url: https://...

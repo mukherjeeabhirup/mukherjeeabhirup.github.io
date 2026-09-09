@@ -1,0 +1,13 @@
+# this file contains the social media links and usernames of the author
+# the socials will be displayed in the order they are defined here
+# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+email: axm240026@utdallas.edu # your email address
+github_username: mukherjeeabhirup # your GitHub user name
+linkedin_username: mukherjeeabhirup # your LinkedIn user name
+scholar_userid: kEWrlzYAAAAJ # your Google Scholar ID
+# TODO: add these once confirmed (neither is on the CV yet)
+# orcid_id: # your ORCID ID
+# semanticscholar_id: # your Semantic Scholar ID
+# TODO: add a CV PDF that does not contain your phone number to assets/pdf/, then uncomment
+# cv_pdf: /assets/pdf/abhirup_mukherjee_cv.pdf # path to your CV PDF file
+# rss_icon: true # uncomment to show the RSS icon (the feed is empty while the blog is disabled)

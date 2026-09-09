@@ -1,0 +1,264 @@
+# CV data in the RenderCV YAML format (https://rendercv.com/). It is rendered on /cv/ by the al_folio_cv
+# plugin, and .github/workflows/render-cv.yml can turn it into a PDF (assets/rendercv/rendercv_output/).
+# Content source: abhirup_website_content.md. The phone number is intentionally left out of the public site.
+# Note: the theme merges the Experience and Volunteer sections into one "Experience" card and renders it
+# before Education; other sections appear in the order listed here.
+cv:
+  name: Abhirup Mukherjee
+  label: PhD Student, Computer Science, The University of Texas at Dallas
+  email: axm240026@utdallas.edu
+  location: Richardson, TX, USA
+  image: ""
+  summary: >-
+    Broadly interested in developing interpretable and robust AI systems for security-critical applications.
+    My current research focuses on understanding how large language models internally represent vulnerability
+    knowledge and whether these representations can be leveraged to improve detection and repair. I am
+    particularly interested in model interpretability and automated vulnerability analysis, as well as the
+    security and trustworthiness of agentic AI architectures.
+
+  social_networks:
+    - network: GitHub
+      username: mukherjeeabhirup
+    - network: LinkedIn
+      username: mukherjeeabhirup
+    - network: Google Scholar
+      username: kEWrlzYAAAAJ
+
+  address:
+    city: Richardson
+    region: TX
+    countryCode: US
+
+  sections:
+    Education:
+      - institution: The University of Texas at Dallas
+        location: Richardson, TX, USA
+        area: Computer Science
+        degree: PhD
+        start_date: "2026-08"
+        highlights:
+          - "Advisor: Dr. Blaine Hoak"
+          - "Research area: adversarial/trustworthy machine learning and security"
+          - "Expected completion: ~2030" # TODO(confirm): expected year
+
+      - institution: The University of Texas at Dallas
+        location: Richardson, TX, USA
+        area: Computer Science (Intelligent Systems track)
+        degree: MS
+        start_date: "2024-08"
+        end_date: "2026-05"
+        highlights:
+          - "Thesis: *Activation Steering for Smart Contract Vulnerability Detection*"
+          - "Thesis advisor: Dr. Latifur Khan. Committee: Dr. Latifur Khan (advisor), Dr. Sergey Bereg, Dr. Yapeng Tian"
+          - "Relevant coursework: Machine Learning; Natural Language Processing; Big Data Management and Analytics; Database Design; Design and Analysis of Computer Algorithms; Artificial Intelligence; Operating Systems Concepts"
+
+      - institution: SRM Institute of Science and Technology
+        location: Kattankulathur (Chennai), India
+        area: Electronics and Communication Engineering
+        degree: B.Tech
+        start_date: "2019-06"
+        end_date: "2023-05"
+        highlights:
+          - "Graduated first class with distinction; CGPA 9.46/10"
+          - "Departmental scholarship for outstanding academic performance (2020–21)"
+          - "Relevant coursework: Scientific Computing with Python; Computer Communication Networks; ARM-Based Embedded System Design; Microprocessors and Microcontrollers; Machine Perception with Cognition; Digital Signal Processing"
+
+    Experience:
+      - company: Dr. Blaine Hoak's lab, Department of Computer Science, The University of Texas at Dallas
+        position: Graduate Research Assistant
+        location: Richardson, TX, USA
+        start_date: "2026-08" # TODO(confirm): official start month
+        highlights:
+          - "Conducting literature reviews to scope new research directions in the lab"
+          # TODO(confirm): doc §12 asks whether the Three.js 3D lab-space redesign mockup may be listed publicly; restore that detail here once confirmed
+          - "Helped stand up the new lab, contributing to lab-naming and space-planning discussions"
+
+      - company: The University of Texas at Dallas
+        position: Master's Thesis Research
+        location: Richardson, TX, USA
+        start_date: "2025-08"
+        end_date: "2026-05"
+        summary: "Advisor: Dr. Latifur Khan"
+        highlights:
+          - "Researched multi-agent LLM systems for automated vulnerability detection and code repair in Solidity smart contracts, evaluating five LLM architectures ranging up to 70B parameters"
+          - "Developed a leave-one-out evaluation framework for few-shot vulnerability detection (holding out vulnerability categories to test generalization), achieving 75–91% held-out recall across DASP categories"
+          - "Replicated and evaluated VulnPatch using QLoRA fine-tuning of CodeLlama on multi-GPU HPC clusters, identifying failure modes including mode collapse on small datasets and insufficient Solidity competence in the base model"
+          - "Developed activation steering (contrastive steering vectors from paired vulnerable/patched code applied at inference time without fine-tuning), which became the IEEE ISI 2026 paper"
+
+      - company: Research Computing, The University of Texas at Dallas # TODO(confirm): official unit name
+        position: HPC Student Assistant
+        location: Richardson, TX, USA
+        start_date: "2025-01"
+        end_date: "2026-05"
+        highlights:
+          - "Accelerated scientific applications such as SIESTA, achieving ~10x speedup through multi-level parallelization and batch processing using OpenMP, MPI, and launcher"
+          - "Optimized GROMACS, AMBER, and SIESTA workloads on GPU clusters; handled SLURM scheduling and job configuration"
+          - "Resolved 50+ support tickets from university researchers, debugging and optimizing parallel scientific codes in C, C++, Fortran, and Python"
+          - "Fine-tuned large language models on HPC clusters for research applications (distributed training, GPU acceleration)"
+          - "Identified optimal HPC cluster configuration settings for performance gains of up to 25% through systematic benchmarking with custom compute kernels and industry-standard benchmarking tools"
+          - "Built an internal Python/PySide CRM, designed relational database schemas, and built Power BI dashboards for the center"
+
+      - company: Comviva Technologies # TODO(confirm): city/location
+        position: Product Development Engineer
+        start_date: "2023-02"
+        end_date: "2024-07"
+        highlights:
+          - "Developed secure payment-gateway features for Qatar National Bank's (QNB) Digital Wallet iOS application, implementing efficient data structures for high-volume transaction processing"
+          - "Architected and optimized REST APIs across 80+ new screens using Swift and SwiftUI, focusing on memory-efficient data transfers for highly responsive UIs"
+          - "Delivered production-ready iOS apps at a two-week deployment cadence, including comprehensive testing across three QA gates, contributing to a 10% product-unit performance improvement"
+          - "Implemented unit-testing frameworks (XCTest, Quick/Nimble), increasing code coverage by 30%"
+          - "Improved code-quality metrics by 30% through systematic profiling, debugging, and integration of SonarQube static analysis in CI/CD pipelines"
+
+      - company: Atos Syntel
+        position: Machine Learning Research Intern
+        start_date: "2022-07"
+        end_date: "2022-09"
+        highlights:
+          - "Optimized CNN-based medical-imaging models for mammogram classification using PyTorch and CUDA"
+          - "Achieved 91% accuracy on breast-cancer detection while reducing inference time by 40% through efficient memory management and batch processing"
+          - "Implemented an EDA pipeline (NumPy, Pandas) for the Breast Cancer Wisconsin dataset"
+          - "Compared deep learning (CNN) with traditional ML (logistic regression, 97.07% accuracy) to characterize efficiency/accuracy trade-offs in medical diagnosis"
+          - "Took part in discussions on bias mitigation in medical AI systems, particularly for datasets affecting minority populations"
+
+      - company: SRM Institute of Science and Technology
+        position: Undergraduate Researcher
+        location: Kattankulathur (Chennai), India
+        start_date: "2022-05"
+        end_date: "2022-10"
+        summary: "Advisor: Dr. T. Rama Rao"
+        highlights:
+          - "Led development of a cost-effective 3D reconstruction pipeline from single 2D images for SLAM and VR applications, in a three-member research team"
+          - "Implemented and benchmarked feature-matching algorithms (SIFT, ORB) and epipolar geometry calculations using OpenCV, PyTorch, and Blender"
+          - "Optimized projection matrices to improve 3D reconstruction accuracy, surpassing traditional optimization baselines"
+          - "Developed device-agnostic image-processing techniques for rapid generation of 3D assets suitable for autonomous navigation systems"
+
+    Publications:
+      # TODO: add `url` (DOI / IEEE Xplore link) once the ISI 2026 proceedings are published
+      - title: "Activation Steering for Smart Contract Vulnerability Detection: A Calibration Mechanism Bounded by Pre-Training Knowledge"
+        authors:
+          - Abhirup Mukherjee
+          - Latifur Khan
+          - Bhavani Thuraisingham
+        publisher: IEEE International Conference on Intelligence and Security Informatics (ISI), Cambridge, UK
+        date: "2026-08"
+        summary: "A. Mukherjee, L. Khan, and B. Thuraisingham. Oral presentation at IEEE ISI 2026, Cambridge, UK, August 12–14, 2026."
+
+      - title: Activation Steering for Smart Contract Vulnerability Detection
+        authors:
+          - Abhirup Mukherjee
+        publisher: MS thesis, The University of Texas at Dallas
+        date: "2026"
+        summary: "Advisor: Dr. Latifur Khan."
+
+    Talks:
+      - bullet: '**Oral presentation**, IEEE ISI 2026, Cambridge, UK, August 12–14, 2026: "Activation Steering for Smart Contract Vulnerability Detection: A Calibration Mechanism Bounded by Pre-Training Knowledge"'
+      - bullet: "**Texas Security Workshop** (upcoming): presenting the activation-steering work" # TODO(confirm): date, venue, talk vs. poster
+      - bullet: "**Comet Computing Conference (CCC)**, The University of Texas at Dallas (upcoming): presenting the activation-steering work" # TODO(confirm): date and format
+
+    Academic Service:
+      - bullet: "External reviewer, USENIX Security Symposium 2027 (USENIX Security ’27), 2026"
+      - bullet: "External reviewer, 9th ACM Workshop on Artificial Intelligence and Security (AISec 2026), 2026"
+
+    Awards:
+      # `authors` duplicates the awarder because RenderCV classifies these entries as publications and requires it; the site ignores it.
+      - title: Betty and Gifford Johnson Travel Award
+        awarder: The University of Texas at Dallas
+        authors: ["The University of Texas at Dallas"]
+        date: "2026" # TODO(confirm): award date
+        summary: Travel support to present at IEEE ISI 2026.
+
+      - title: 2nd Place Overall, Best Use of MongoDB Atlas, and Best Use of Redis
+        awarder: HackUTD 2024 (1,100+ participants; the largest hackathon in Texas)
+        authors: ["HackUTD 2024 (1,100+ participants; the largest hackathon in Texas)"]
+        date: "2024-11"
+        summary: For an enterprise-grade data observability system built for the PNC Bank challenge.
+
+      - title: First class with distinction, B.Tech
+        awarder: SRM Institute of Science and Technology
+        authors: ["SRM Institute of Science and Technology"]
+        date: "2023"
+
+      - title: 2nd Place and Global Nominee
+        awarder: NASA Space Apps Challenge 2021
+        authors: ["NASA Space Apps Challenge 2021"]
+        date: "2021"
+        summary: Led ideation and development of a Mars Lander simulation game in a team of five; selected as a global nominee among thousands of international submissions.
+
+      - title: Departmental Scholarship
+        awarder: SRM Institute of Science and Technology
+        authors: ["SRM Institute of Science and Technology"]
+        date: "2021"
+        summary: Merit-based, for outstanding academic performance (9.46/10 CGPA), academic year 2020–21.
+    Projects:
+      # TODO(confirm): add `url` fields for the GitHub repositories / project links once decided
+      - name: Activation Steering for Smart Contract Vulnerability Detection
+        start_date: "2025"
+        end_date: "2026"
+        summary: MS thesis topic and IEEE ISI 2026 paper.
+        highlights:
+          - "Contrastive steering vectors computed from vulnerable/patched code pairs and applied at inference time without fine-tuning"
+          - "Six LLMs (7B–34B parameters) evaluated on 11-class Solidity vulnerability classification on the SmartBugs Curated dataset"
+          - "Core finding: activation steering is a confidence-calibration mechanism bounded by pre-training knowledge, not a reasoning enhancer"
+
+      - name: Multi-Agent LLM Systems for Vulnerability Detection and Patching
+        start_date: "2025"
+        end_date: "2026"
+        summary: MS thesis research.
+        highlights:
+          - "Multi-agent LLM pipeline for detecting and patching vulnerabilities in Solidity smart contracts"
+          - "Leave-one-out few-shot evaluation framework (75–91% held-out recall across DASP categories)"
+          - "VulnPatch replication with QLoRA-fine-tuned CodeLlama"
+
+      - name: Single-Image 3D Reconstruction Pipeline
+        date: "2022"
+        summary: SRM Institute of Science and Technology.
+        highlights:
+          - "SIFT/ORB feature matching, epipolar geometry, and projection-matrix optimization"
+          - "Built with OpenCV, PyTorch, and Blender; targets SLAM/VR and autonomous navigation"
+
+      - name: Data Pattern Observatory
+        date: "2024-11"
+        summary: "HackUTD 2024: 2nd Place Overall, Best Use of MongoDB Atlas, Best Use of Redis."
+        highlights:
+          - "End-to-end data observability system for the PNC Bank challenge that visualizes data-flow patterns and flags anomalies with 85%+ accuracy across an organization"
+          - "Containerized microservices with a Streamlit front end"
+          - "Tech: Python, MongoDB, Redis, Elasticsearch, Streamlit, Docker"
+
+      - name: Mars Lander Simulation Game
+        date: "2021"
+        summary: NASA Space Apps Challenge 2021 (2nd Place, Global Nominee); team of five, led ideation and development.
+
+      - name: NodeMCU WiFi-Controlled IoT Smart Car
+        start_date: "2021-06"
+        end_date: "2021-07"
+        highlights:
+          - "Embedded remote-controlled vehicle on an ESP8266 WiFi SoC with an L298N motor driver"
+          - "Direction and speed control in Embedded C for a high-power motor driver (5–35 V, 25 W)"
+          - "Local network infrastructure and a Kotlin Android app for wireless control"
+
+    Skills:
+      - name: Deep learning tools/frameworks
+        keywords: [PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Lightning, Scikit-Learn, Keras, OpenCV, Spark MLlib]
+      - name: Programming languages
+        keywords: [Python, C, C++, Swift, SwiftUI, Fortran, SQL, Bash, LaTeX, MATLAB]
+      - name: HPC and parallel computing
+        keywords: [NVIDIA CUDA, OpenMP, MPI, SLURM, CuPy, high-throughput computing]
+      - name: Big data and cloud
+        keywords: [Apache Spark, Kafka, MongoDB, Redis, Elasticsearch, Docker, "AWS (EC2, S3)"]
+      - name: Development tools
+        keywords: [Git/GitHub, GitLab, Docker, "CI/CD (Jenkins)", Postman, SonarQube, GDB, Perf, JIRA]
+      - name: Operating systems / systems
+        keywords: [Linux/Unix, parallel programming, POSIX threads, shell scripting]
+      - name: Other
+        keywords: ["Three.js (3D web)", "PySide (desktop GUIs)", Power BI, "Kotlin (Android)", Embedded C]
+
+    Certificates:
+      - name: Applied Data Science with Python Specialization
+        issuer: IBM / Coursera
+      - name: Deep Learning Applications for Computer Vision
+        issuer: University of Colorado Boulder / Coursera
+      - name: Python for Data Science, AI and Development
+        issuer: IBM / Coursera
+
+    Leadership:
+      - bullet: "**Committee Head, Team Envision, SRM Institute of Science and Technology** (July – December 2021): recruited and managed a 15-member team for the Electronics and Mechanical domain of the university's flagship technical festival; maintained technical and financial documentation for the operations of two technical campus clubs; coordinated with corporate sponsors and organized technical workshops and competitions for 500+ participants"

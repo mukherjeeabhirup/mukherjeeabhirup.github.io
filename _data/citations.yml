@@ -1,0 +1,5 @@
+# Google Scholar citation counts, refreshed by bin/update_scholar_citations.py
+# (run manually or by .github/workflows/update-citations.yml). The demo data was removed.
+metadata:
+  last_updated: ''
+papers: {}

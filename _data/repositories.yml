@@ -1,0 +1,8 @@
+github_users:
+  - mukherjeeabhirup
+
+repo_description_lines_max: 2
+
+# TODO: list the repositories to feature (as owner/repo) once you decide which ones, e.g.
+# github_repos:
+#   - mukherjeeabhirup/<repository-name>
