@@ -65,7 +65,17 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
   failures.push("`Gemfile` must not use git-branch pin for `al_math`; use released gem version.");
 }
 
-for (const forbiddenPath of ["_includes", "_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
+// This personal site intentionally overrides news dates; the gem version and
+// checksums for that include are tracked in .al-folio-overrides.yml.
+if (exists("_includes")) {
+  for (const entry of fs.readdirSync(path.join(root, "_includes"))) {
+    if (entry !== "news.liquid") {
+      failures.push(`Unreviewed site include override: \`_includes/${entry}\`.`);
+    }
+  }
+}
+
+for (const forbiddenPath of ["_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
   if (exists(forbiddenPath)) {
     failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
   }

@@ -3,7 +3,7 @@ layout: post
 date: 2026-08-01 12:00:00-0500
 inline: true
 related_posts: false
-# TODO: the source only says 'Aug 2026' (exact start date to confirm); the day is a placeholder, which currently sorts this item below the ISI talk.
+# Only the month is specified; the day is a placeholder for sorting.
 ---
 
-Started the PhD in Computer Science at UT Dallas, advised by Dr. Blaine Hoak.
+Thrilled to start as a computer science Ph.D. student and Graduate Research Assistant in the [Department of Computer Science](https://cs.utdallas.edu/), advised by Prof. [Blaine Hoak](https://hoak.me)!
