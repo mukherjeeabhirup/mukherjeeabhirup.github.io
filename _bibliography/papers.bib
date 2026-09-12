@@ -4,16 +4,21 @@
 % Publications rendered on /publications/ (all entries) and on the about page (entries with selected={true}).
 % Theme-specific fields (abbr, bibtex_show, selected, pdf, slides, code, ...) are documented in docs/CUSTOMIZE.md.
 
-% TODO: ISI 2026 proceedings are not published yet (as of September 2026). When they are, add
-%   pages = {...}, doi = {...} (or html = {IEEE Xplore URL}), and the official abstract = {...}.
-% TODO: add pdf = {file in assets/pdf/}, slides = {...} and code = {repository URL} once you decide to share them.
+% Paper is intentionally unavailable until the IEEE ISI 2026 proceedings link is ready.
+% Add paper = {proceedings URL} or pdf = {paper URL or filename in assets/pdf/} to activate Paper.
+% Either link takes precedence over paper_pending. Then add the confirmed pages, DOI, and official abstract.
 @inproceedings{mukherjee2026activation,
-  abbr        = {ISI},
-  bibtex_show = {true},
+  abbr        = {Conference},
   selected    = {true},
+  preview     = {activation-steering-method.svg},
+  preview_alt = {Activation steering methodology: leave-one-category-out prompting, CDM and CPS steering vector extraction, and steered inference},
+  paper_pending = {true},
+  poster      = {isi_paper_poster_portrait_CCC.pdf},
+  slides      = {paper12-isi-2026-v3.pdf},
   title       = {Activation Steering for Smart Contract Vulnerability Detection: A Calibration Mechanism Bounded by Pre-Training Knowledge},
   author      = {Mukherjee, Abhirup and Khan, Latifur and Thuraisingham, Bhavani},
   booktitle   = {IEEE International Conference on Intelligence and Security Informatics (ISI)},
+  venue_display = {ISI'26: IEEE International Conference on Intelligence and Security Informatics},
   year        = {2026},
   month       = aug,
   address     = {Cambridge, UK},
@@ -22,7 +27,7 @@
 
 @mastersthesis{mukherjee2026thesis,
   abbr        = {Thesis},
-  bibtex_show = {true},
+  paper       = {https://www.proquest.com/docview/3354974136},
   title       = {Activation Steering for Smart Contract Vulnerability Detection},
   author      = {Mukherjee, Abhirup},
   school      = {The University of Texas at Dallas},

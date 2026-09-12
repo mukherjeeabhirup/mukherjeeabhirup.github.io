@@ -2,7 +2,6 @@
 layout: page
 permalink: /publications/
 title: publications
-description: peer-reviewed publications and theses in reversed chronological order
 nav: true
 nav_order: 1
 ---

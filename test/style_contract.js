@@ -65,17 +65,23 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
   failures.push("`Gemfile` must not use git-branch pin for `al_math`; use released gem version.");
 }
 
-// This personal site intentionally overrides news dates; the gem version and
-// checksums for that include are tracked in .al-folio-overrides.yml.
-if (exists("_includes")) {
-  for (const entry of fs.readdirSync(path.join(root, "_includes"))) {
-    if (entry !== "news.liquid") {
-      failures.push(`Unreviewed site include override: \`_includes/${entry}\`.`);
+// This personal site's reviewed overrides retain native styling while changing
+// news dates and publication resources. Versions/hashes live in .al-folio-overrides.yml.
+const allowedOverrides = {
+  _includes: ["news.liquid"],
+  _layouts: ["bib.liquid"],
+  _sass: ["_publications.scss"],
+};
+for (const [directory, allowedFiles] of Object.entries(allowedOverrides)) {
+  if (!exists(directory)) continue;
+  for (const entry of fs.readdirSync(path.join(root, directory), { withFileTypes: true })) {
+    if (!entry.isFile() || !allowedFiles.includes(entry.name)) {
+      failures.push(`Unreviewed site override: \`${directory}/${entry.name}\`.`);
     }
   }
 }
 
-for (const forbiddenPath of ["_layouts", "_sass", "_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
+for (const forbiddenPath of ["_scripts", "assets/tailwind", "tailwind.config.js", "assets/webfonts"]) {
   if (exists(forbiddenPath)) {
     failures.push(`Starter must not own core component path \`${forbiddenPath}\`; move ownership to the corresponding gem.`);
   }
