@@ -1,0 +1,216 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.4in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{needspace}
+\usepackage{ragged2e}
+\usepackage{tabularx}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue,
+    hypertexnames=false,
+    pdftitle={Abhirup Mukherjee - Curriculum Vitae},
+    pdfauthor={Abhirup Mukherjee},
+    pdfsubject={Academic curriculum vitae, September 2026}
+}
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{7pt}{3pt}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing{\subsection}{0pt}{5pt}{2pt}
+\pagenumbering{gobble}
+\linespread{0.96}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+\let\cvsection\section
+\renewcommand{\section}{\Needspace{7\baselineskip}\cvsection}
+\newsavebox{\cvheadingbox}
+\newsavebox{\cvdatebox}
+
+\newcommand{\educationitem}[4]{%
+    \Needspace{5\baselineskip}%
+    \textbf{#1} \hfill \textbf{#2}\\
+    #3 \hfill #4
+}
+\newcommand{\experienceitem}[3]{%
+    \Needspace{5\baselineskip}%
+    \sbox{\cvheadingbox}{\textbf{#1}, \textit{#2}}%
+    \sbox{\cvdatebox}{\textbf{#3}}%
+    \ifdim\dimexpr\wd\cvheadingbox+\wd\cvdatebox+1em\relax<\linewidth
+        \usebox{\cvheadingbox}\hfill\usebox{\cvdatebox}%
+    \else
+        \textbf{#1}\hfill\usebox{\cvdatebox}\\
+        \textit{#2}%
+    \fi
+}
+\newcommand{\blackhref}[2]{\href{#1}{\color{black}#2}}
+\newcommand{\skillrow}[2]{\textbf{#1} & #2\\[1pt]}
+
+\begin{document}
+\RaggedRight
+\begin{center}
+    {\LARGE\textbf{ABHIRUP MUKHERJEE}}\\[7pt]
+    \small
+    \faEnvelope\ \href{mailto:axm240026@utdallas.edu}{axm240026@utdallas.edu} \quad
+    \faLinkedin\ \href{https://linkedin.com/in/mukherjeeabhirup}{mukherjeeabhirup} \quad
+    \faGlobe\ \href{https://mukherjeeabhirup.github.io/}{mukherjeeabhirup.github.io} \quad
+    \faGithub\ \href{https://github.com/mukherjeeabhirup}{mukherjeeabhirup}
+\end{center}
+
+\section*{Research Interests}
+I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UTD), working with Prof.\ \blackhref{https://hoak.me/}{Blaine Hoak} as a Graduate Research Assistant on problems at the intersection of adversarial machine learning and computer security. Broadly, I'm interested in interpretable and robust AI models in security-critical applications.
+
+\section*{Education}
+\educationitem{The University of Texas at Dallas}{August 2026 - Present}{Doctor of Philosophy in Computer Science}{Richardson, TX}
+\begin{itemize}
+    \item Advisor: Prof.\ \blackhref{https://hoak.me/}{Blaine Hoak}
+\end{itemize}
+\vspace{2pt}
+\educationitem{The University of Texas at Dallas}{August 2024 - May 2026}{Master of Science in Computer Science}{Richardson, TX}
+\begin{itemize}
+    \item Thesis Advisor: Dr.\ \blackhref{https://personal.utdallas.edu/~lkhan/}{Latifur Khan}
+    \item Thesis: \blackhref{https://www.proquest.com/docview/3354974136}{Activation Steering for Smart Contract Vulnerability Detection}
+\end{itemize}
+\vspace{2pt}
+\educationitem{SRM Institute of Science and Technology}{June 2019 - May 2023}{Bachelor of Technology in Electronics and Communication Engineering}{Kattankulathur, India}
+
+\section*{Publications}
+\subsection*{Conference Proceedings}
+\begin{itemize}
+    \item \textbf{A. Mukherjee}, L. Khan, and B. Thuraisingham, ``Activation Steering for Smart Contract Vulnerability Detection: A Calibration Mechanism Bounded by Pre-Training Knowledge,'' \textit{IEEE International Conference on Intelligence and Security Informatics (ISI)}, Cambridge, UK, 2026. Oral presentation. \href{https://mukherjeeabhirup.github.io/assets/pdf/isi_paper_poster_portrait_CCC.pdf}{[Poster]} \href{https://mukherjeeabhirup.github.io/assets/pdf/paper12-isi-2026-v3.pdf}{[Slides]}
+\end{itemize}
+\subsection*{Thesis}
+\begin{itemize}
+    \item \textbf{A. Mukherjee}, ``Activation Steering for Smart Contract Vulnerability Detection,'' \textit{Master's thesis, The University of Texas at Dallas}, 2026. \href{https://www.proquest.com/docview/3354974136}{[Thesis]}
+\end{itemize}
+
+\section*{Professional Service}
+\subsection*{External Reviewer}
+\begin{itemize}
+    \item ACM Workshop on Artificial Intelligence and Security (AISec) - 2026
+    \item USENIX Security Symposium - 2027
+\end{itemize}
+
+\section*{Research Experience}
+\experienceitem{Graduate Research Assistant}{The University of Texas at Dallas, Richardson, TX}{August 2026 - Present}
+\begin{itemize}
+    \item Advised by Dr.\ \blackhref{https://hoak.me/}{Blaine Hoak}; working at the intersection of adversarial machine learning and computer security.
+\end{itemize}
+\vspace{2pt}
+\experienceitem{Master's Thesis Research}{The University of Texas at Dallas}{August 2025 - May 2026}\\
+\textit{Advisor: Dr.\ \blackhref{https://personal.utdallas.edu/~lkhan/}{Latifur Khan}} \quad
+\href{https://mukherjeeabhirup.github.io/projects/activation-steering/}{[Project]}
+\begin{itemize}
+    \item Investigated activation steering for Solidity smart contract vulnerability detection, evaluating six LLMs (7B-34B parameters) on an 11-class classification task using the SmartBugs Curated dataset.
+    \item Computed contrastive steering vectors from vulnerable/patched code pairs and applied them at inference time without fine-tuning.
+    \item Evaluated direction-specific confidence calibration and improvements in multi-class vulnerability classification beyond few-shot prompting; this work became a first-author IEEE ISI 2026 paper.
+    \item Replicated and evaluated VulnPatch using \textit{QLoRA fine-tuning} of CodeLlama on multi-GPU HPC clusters, identifying failure modes including mode collapse on small datasets and insufficient Solidity competence in the base model.
+\end{itemize}
+\vspace{2pt}
+\experienceitem{Undergraduate Researcher}{SRM Institute of Science and Technology}{May 2022 - October 2022}\\
+\textit{Advisor: Dr.\ \blackhref{https://www.linkedin.com/in/prof-dr-t-rama-rao-50197a93/}{T. Rama Rao}} \quad
+\href{https://mukherjeeabhirup.github.io/projects/single-image-3d-reconstruction/}{[Project]}
+\begin{itemize}
+    \item Led development of a cost-effective \textit{3D reconstruction} pipeline from single 2D images for SLAM and VR applications in a three-member research team.
+    \item Implemented and benchmarked feature matching algorithms (\textit{SIFT}, \textit{ORB}) and \textit{epipolar geometry} calculations using \textit{OpenCV}, \textit{PyTorch}, and \textit{Blender}.
+    \item Optimized projection matrices to improve 3D reconstruction accuracy, surpassing traditional optimization baselines.
+    \item Developed device-agnostic image processing techniques for rapid generation of 3D assets suitable for \textit{autonomous navigation systems}.
+\end{itemize}
+
+\section*{Work History}
+\experienceitem{HPC Student Assistant}{The University of Texas at Dallas}{January 2025 - May 2026}
+\begin{itemize}
+    \item Accelerated scientific applications such as \textit{Siesta}, achieving \textit{10x} speedup through multi-level parallelization and batch processing using \textit{OpenMP}, \textit{MPI}, and \textit{launcher}.
+    \item Resolved \textit{50+} support tickets from university researchers involving debugging and optimizing parallel scientific codes in \textit{C}, \textit{C++}, \textit{Fortran}, and \textit{Python}.
+    \item Fine-tuned large language models on HPC clusters for research applications, gaining hands-on experience with \textit{distributed training} and \textit{GPU acceleration}.
+    \item Assisted in identifying optimal HPC cluster configuration settings for performance boosts of up to \textit{25\%} through systematic benchmarking using custom computation kernels and industry-standard benchmarking tools.
+\end{itemize}
+\vspace{2pt}
+\experienceitem{Product Development Engineer}{Comviva Technologies}{February 2023 - July 2024}
+\begin{itemize}
+    \item Developed secure payment gateway features for \textit{Qatar National Bank's (QNB)} Digital Wallet \textit{iOS application}, implementing efficient data structures for high-volume transaction processing.
+    \item Architected and optimized \textit{REST APIs} across \textit{80+ new screens} using \textit{Swift} and \textit{SwiftUI}, focusing on memory-efficient data transfers for highly responsive UIs.
+    \item Delivered production-ready \textit{iOS apps} at a \textit{two-week} deployment cadence, including comprehensive software testing across \textit{three} QA gates, contributing to \textit{10\%} product unit performance improvement.
+    \item Implemented unit testing frameworks such as \textit{XCTest} and \textit{Quick/Nimble}, increasing code coverage by \textit{30\%}.
+    \item Enhanced code quality metrics by \textit{30\%} through systematic profiling, debugging, and integration of \textit{SonarQube} static analysis in CI/CD pipelines.
+\end{itemize}
+\vspace{2pt}
+\experienceitem{Machine Learning Research Intern}{Atos Syntel}{July 2022 - September 2022}
+\begin{itemize}
+    \item Optimized \textit{CNN-based} medical imaging models for mammogram classification using \textit{PyTorch} and \textit{CUDA}.
+    \item Achieved \textit{91\% accuracy} on breast cancer detection while reducing inference time by \textit{40\%} through efficient memory management and batch processing.
+    \item Implemented an \textit{EDA} pipeline using \textit{NumPy} and \textit{Pandas} for the Breast Cancer Wisconsin dataset.
+    \item Conducted comparative analysis of deep learning (CNN) versus traditional ML approaches (Logistic Regression: \textit{97.07\%} accuracy) to identify tradeoffs between computational efficiency and accuracy in medical diagnosis applications.
+    \item Engaged in discussions on bias mitigation in medical AI systems, particularly for datasets affecting minority populations.
+\end{itemize}
+
+\section*{Selected Projects}
+\experienceitem{\blackhref{https://mukherjeeabhirup.github.io/projects/data-pattern-observatory/}{Data Pattern Observatory - HackUTD 2024}}{2nd Place Overall (1,100+ participants)}{November 2024}\\
+\href{https://github.com/mukherjeeabhirup/data-observability-hackutd}{[Code]} \quad
+\href{https://devpost.com/software/data-pattern-observatory}{[Devpost]}
+\begin{itemize}
+    \item Developed a data observability system for the \textit{PNC Bank} challenge to visualize patterns and identify anomalies with \textit{85\%+} accuracy as data flows across an organization.
+    \item Architected a full-stack data processing pipeline using \textit{Python}, \textit{MongoDB}, \textit{Redis}, \textit{Elasticsearch}, and \textit{Docker}-containerized microservices with a \textit{Streamlit} front end.
+\end{itemize}
+\vspace{2pt}
+\experienceitem{\blackhref{https://mukherjeeabhirup.github.io/projects/mars-lander-simulation-game/}{Mars Lander Simulation Game}}{NASA Space Apps Challenge}{October 2021}\\
+\href{https://github.com/mukherjeeabhirup/TeamMarooned5}{[Code]} \quad
+\href{https://mukherjeeabhirup.github.io/assets/pdf/marooned-5-slides.pdf}{[Slides]}
+\begin{itemize}
+    \item Led ideation and development of a Mars lander simulation game in a team of five; placed 2nd locally and was selected as a global nominee among thousands of international submissions.
+\end{itemize}
+\vspace{2pt}
+\experienceitem{\blackhref{https://mukherjeeabhirup.github.io/projects/nodemcu-iot-smart-car/}{NodeMCU WiFi-Controlled IoT Smart Car}}{SRM Institute of Science and Technology}{July 2021}\\
+\href{https://mukherjeeabhirup.github.io/assets/video/nodemcu-smart-car-web.mp4}{[Demo]}
+\begin{itemize}
+    \item Designed and implemented an \textit{embedded system} for a remote-controlled vehicle using an \textit{ESP8266 WiFi SoC} and \textit{L298N} motor driver.
+    \item Implemented direction and speed controls in \textit{Embedded C} for a high-power motor driver (5-35V, 25W).
+    \item Created local network infrastructure and an \textit{Android} application interface using \textit{Kotlin} for wireless control.
+\end{itemize}
+
+\section*{Skills}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.34\linewidth}@{\hspace{12pt}}>{\RaggedRight\arraybackslash}X@{}}
+\skillrow{Machine Learning and Cybersecurity}{Machine Learning, Deep Learning, Computer Vision, Natural Language Processing, Model Interpretability, Activation Steering, Cybersecurity, Smart Contract Vulnerability Analysis, Secure Software Development}
+\skillrow{Deep Learning Tools/Frameworks}{PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Lightning, Scikit-Learn, Keras, OpenCV, Spark MLlib}
+\skillrow{Programming Languages}{Python, C, C++, Swift, SwiftUI, Fortran, SQL, Bash, \LaTeX, MATLAB}
+\skillrow{HPC and Parallel Computing}{NVIDIA CUDA, OpenMP, MPI, SLURM, CuPy, High Throughput Computing}
+\skillrow{Big Data and Cloud}{Apache Spark, Kafka, MongoDB, Redis, Elasticsearch, Docker, AWS (EC2, S3)}
+\skillrow{Development Tools}{Git/GitHub, GitLab, Docker, CI/CD (Jenkins), Postman, SonarQube, GDB, Perf, JIRA}
+\textbf{Operating Systems} & Linux/Unix, Parallel Programming, POSIX Threads, Shell Scripting
+\end{tabularx}
+
+\section*{Relevant Courses}
+Machine Learning $\bullet$ Deep Learning $\bullet$ Computer Vision $\bullet$ Natural Language Processing $\bullet$ Big Data Management and Analytics $\bullet$ Database Design $\bullet$ Design and Analysis of Computer Algorithms $\bullet$ Artificial Intelligence $\bullet$ Operating Systems Concepts $\bullet$ Scientific Computing with Python $\bullet$ Computer Communication Networks $\bullet$ ARM Based Embedded System Design $\bullet$ Microprocessors and Microcontrollers $\bullet$ Digital Signal Processing $\bullet$ Machine Perception with Cognition
+
+\section*{Awards and Achievements}
+\begin{itemize}
+    \item \textbf{HackUTD 2024 - 2nd Place Overall} - Achieved 2nd place among 1,100+ participants for an enterprise-grade data observability system.
+    \item \textbf{NASA Space Apps Challenge 2021 - 2nd Place Locally and Global Nominee} - Led ideation and development of a Mars lander simulation game in a team of five, selected as a global nominee among thousands of international submissions.
+    \item \textbf{Departmental Scholarship, SRM Institute} - Awarded a merit-based scholarship in recognition of outstanding academic performance (9.46/10 CGPA) during academic year 2020-21.
+\end{itemize}
+
+\section*{Leadership Experience}
+\experienceitem{Committee Head, Team Envision}{SRM Institute of Science and Technology}{July 2021 - December 2021}
+\begin{itemize}
+    \item Recruited and managed a team of \textit{15} members for the Electronics and Mechanical domain of the university's flagship technical festival.
+    \item Maintained technical and financial documentation for operations of two technical campus clubs.
+    \item Coordinated with corporate sponsors and organized technical workshops and competitions for \textit{500+} participants.
+\end{itemize}
+
+\section*{Professional Development and Certifications}
+\begin{itemize}
+    \item Applied Data Science with Python Specialization (IBM/Coursera)
+    \item Deep Learning Applications for Computer Vision (University of Colorado Boulder/Coursera)
+    \item Python for Data Science, AI and Development (IBM/Coursera)
+\end{itemize}
+\end{document}

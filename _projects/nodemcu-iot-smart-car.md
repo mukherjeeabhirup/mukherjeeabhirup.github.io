@@ -1,7 +1,7 @@
 ---
 layout: page
 title: NodeMCU WiFi-Controlled IoT Smart Car
-description: SRM Institute of Science and Technology, 2022
+description: SRM Institute of Science and Technology, July 2021
 img:
 importance: 3
 category: fun

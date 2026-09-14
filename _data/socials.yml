@@ -12,6 +12,5 @@ scholar_userid: kEWrlzYAAAAJ # your Google Scholar ID
 # TODO: add these once confirmed (neither is on the CV yet)
 # orcid_id: # your ORCID ID
 # semanticscholar_id: # your Semantic Scholar ID
-# TODO: add a CV PDF that does not contain your phone number to assets/pdf/, then uncomment
-# cv_pdf: /assets/pdf/abhirup_mukherjee_cv.pdf # path to your CV PDF file
+cv_pdf: /assets/pdf/abhirup_mukherjee_cv.pdf # path to your CV PDF file
 # rss_icon: true # uncomment to show the RSS icon (the feed is empty while the blog is disabled)

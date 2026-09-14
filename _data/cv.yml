@@ -59,8 +59,6 @@ cv:
         start_date: "2019-06"
         end_date: "2023-05"
         highlights:
-          - "Graduated first class with distinction; CGPA 9.46/10"
-          - "Departmental scholarship for outstanding academic performance (2020–21)"
           - "Relevant coursework: Scientific Computing with Python; Computer Communication Networks; ARM-Based Embedded System Design; Microprocessors and Microcontrollers; Machine Perception with Cognition; Digital Signal Processing"
 
     Experience:
@@ -161,13 +159,7 @@ cv:
 
     Awards:
       # `authors` duplicates the awarder because RenderCV classifies these entries as publications and requires it; the site ignores it.
-      - title: Betty and Gifford Johnson Travel Award
-        awarder: The University of Texas at Dallas
-        authors: ["The University of Texas at Dallas"]
-        date: "2026" # TODO(confirm): award date
-        summary: Travel support to present at IEEE ISI 2026.
-
-      - title: 2nd Place Overall, Best Use of MongoDB Atlas, and Best Use of Redis
+      - title: 2nd Place Overall
         awarder: HackUTD 2024 (1,100+ participants; the largest hackathon in Texas)
         authors: ["HackUTD 2024 (1,100+ participants; the largest hackathon in Texas)"]
         date: "2024-11"
@@ -181,7 +173,7 @@ cv:
       - title: 2nd Place and Global Nominee
         awarder: NASA Space Apps Challenge 2021
         authors: ["NASA Space Apps Challenge 2021"]
-        date: "2021"
+        date: "2021-10"
         summary: Led ideation and development of a Mars Lander simulation game in a team of five; selected as a global nominee among thousands of international submissions.
 
       - title: Departmental Scholarship
@@ -218,19 +210,18 @@ cv:
 
       - name: Data Pattern Observatory
         date: "2024-11"
-        summary: "HackUTD 2024: 2nd Place Overall, Best Use of MongoDB Atlas, Best Use of Redis."
+        summary: "HackUTD 2024: 2nd Place Overall."
         highlights:
           - "End-to-end data observability system for the PNC Bank challenge that visualizes data-flow patterns and flags anomalies with 85%+ accuracy across an organization"
           - "Containerized microservices with a Streamlit front end"
           - "Tech: Python, MongoDB, Redis, Elasticsearch, Streamlit, Docker"
 
       - name: Mars Lander Simulation Game
-        date: "2021"
+        date: "2021-10"
         summary: NASA Space Apps Challenge 2021 (2nd Place, Global Nominee); team of five, led ideation and development.
 
       - name: NodeMCU WiFi-Controlled IoT Smart Car
-        start_date: "2021-06"
-        end_date: "2021-07"
+        date: "2021-07"
         highlights:
           - "Embedded remote-controlled vehicle on an ESP8266 WiFi SoC with an L298N motor driver"
           - "Direction and speed control in Embedded C for a high-power motor driver (5–35 V, 25 W)"

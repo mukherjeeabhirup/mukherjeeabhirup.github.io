@@ -66,9 +66,9 @@ if (/gem 'al_math',\s*:git =>/.test(gemfile)) {
 }
 
 // This personal site's reviewed overrides retain native styling while changing
-// news dates and publication resources. Versions/hashes live in .al-folio-overrides.yml.
+// news dates, publication resources, and direct CV navigation. Versions/hashes live in .al-folio-overrides.yml.
 const allowedOverrides = {
-  _includes: ["news.liquid"],
+  _includes: ["header.liquid", "news.liquid"],
   _layouts: ["bib.liquid"],
   _sass: ["_publications.scss"],
 };

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mars Lander Simulation Game
-description: NASA Space Apps Challenge, 2022
+description: NASA Space Apps Challenge, October 2021
 img:
 importance: 2
 category: fun
