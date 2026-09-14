@@ -435,7 +435,6 @@ h1,
 h2,
 h3,
 h4,
-h6,
 pre,
 code,
 form,
@@ -544,18 +543,6 @@ hr {
   -webkit-box-shadow: none;
   box-shadow: none;
   z-index: 10;
-}
-
-#clusters > a {
-  color: #ef5c00;
-  text-decoration: underline;
-  cursor: auto;
-}
-
-#clusters > a:hover {
-  color: #126dce;
-  text-decoration: underline;
-  cursor: auto;
 }
 
 mark,
