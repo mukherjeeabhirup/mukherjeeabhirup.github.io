@@ -18,7 +18,7 @@ footer_text: >
 keywords: LLM interpretability, activation steering, representation engineering, vulnerability detection, program repair, smart contract security, Solidity, adversarial machine learning, trustworthy AI, agentic AI security, high-performance computing
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 timezone: America/Chicago # build-time timezone, so news dates render the same locally and on GitHub Actions
-icon: ⚛️ # TODO: this is the default al-folio favicon; replace with your own emoji or an image name in /assets/img/
+icon: 👨🏽‍🎓 # graduation emoji favicon
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
 
 # A GitHub Pages *user* site must live in a repo named <github-username>.github.io (here: mukherjeeabhirup.github.io).

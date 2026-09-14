@@ -1,8 +1,8 @@
 ---
 layout: page
-title: projects
+title: research and projects
 permalink: /projects/
-description: research projects, hackathon builds, and personal projects
+description:
 nav: true
 nav_order: 2
 display_categories: [research, fun]
