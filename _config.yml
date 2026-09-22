@@ -398,6 +398,7 @@ filtered_bibtex_keywords:
     google_scholar_id,
     hal,
     html,
+    ieee,
     inspirehep_id,
     paper,
     paper_pending,
