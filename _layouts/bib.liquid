@@ -210,6 +210,11 @@
 
     <!-- Links/Buttons -->
     <div class="links">
+      {% if entry.ieee %}
+        <a href="{{ entry.ieee }}" class="btn btn-sm z-depth-0" target="_blank" rel="noopener noreferrer"
+          ><i class="fa-solid fa-link" aria-hidden="true"></i> Link</a
+        >
+      {% endif %}
       {% if entry.award %}
         <a class="award btn btn-sm z-depth-0" role="button">
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
@@ -256,11 +261,6 @@
         >
           <i class="fa-solid fa-file-lines" aria-hidden="true"></i> Paper
         </button>
-      {% endif %}
-      {% if entry.ieee %}
-        <a href="{{ entry.ieee }}" class="btn btn-sm z-depth-0" target="_blank" rel="noopener noreferrer"
-          ><i class="fa-solid fa-link" aria-hidden="true"></i> Link</a
-        >
       {% endif %}
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
