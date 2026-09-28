@@ -10,7 +10,7 @@ github: https://github.com/mukherjeeabhirup/TeamMarooned5
 
 [View code on GitHub](https://github.com/mukherjeeabhirup/TeamMarooned5).
 
-A Mars lander simulation game built for the NASA Space Apps Challenge. This project placed 2nd locally, and was selected as a global nominee among thousands of international submissions.
+A Mars lander simulation game built for the [NASA Space Apps Challenge](https://2021.spaceappschallenge.org/challenges/statements/planetary-lander-video-game/teams/marooned5/project/). This project placed 2nd locally, and was selected as a global nominee among thousands of international submissions.
 
 ## Presentation slides
 
