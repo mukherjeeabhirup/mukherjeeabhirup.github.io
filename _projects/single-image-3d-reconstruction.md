@@ -2,7 +2,10 @@
 layout: page
 title: Single-Image 3D Reconstruction Pipeline
 description: SRM Institute of Science and Technology, 2022
-img:
+img: assets/img/update-1117/thumb-2d-to-3d.webp
+thumbnail_alt: "Diagram showing a square in a 2D image reconstructed as a 3D cube."
+summary: "A cost-effective pipeline for 3D reconstruction from single 2D images, developed for SLAM and VR applications."
+thumbnail_height: 450
 importance: 3
 category: research
 ---

@@ -6,6 +6,7 @@
 cv:
   name: Abhirup Mukherjee
   label: PhD Student, Computer Science, The University of Texas at Dallas
+  website: https://themukherjee.com
   email: abhirup.mukherjee@utdallas.edu
   location: Richardson, TX, USA
   image: ""
@@ -150,16 +151,22 @@ cv:
 
     Talks:
       - bullet: '**Oral presentation**, IEEE ISI 2026, Cambridge, UK, August 12–14, 2026: "Activation Steering for Smart Contract Vulnerability Detection: A Calibration Mechanism Bounded by Pre-Training Knowledge"'
-      - bullet: "**Texas Security Workshop** (upcoming): presenting the activation-steering work" # TODO(confirm): date, venue, talk vs. poster
-      - bullet: "**Comet Computing Conference (CCC)**, The University of Texas at Dallas (upcoming): presenting the activation-steering work" # TODO(confirm): date and format
+      - bullet: "**Poster presentation**, Texas Security Workshop 2026, UT Dallas, September 26, 2026: Activation Steering for Smart Contract Vulnerability Detection"
+      - bullet: "**Poster presentation**, Comet Computing Conference 2026, UT Dallas, September 16, 2026: Activation Steering for Smart Contract Vulnerability Detection: A Calibration Mechanism Bounded by Pre-Training Knowledge"
 
     Academic Service:
       - bullet: "External reviewer, USENIX Security Symposium 2027 (USENIX Security ’27), 2026"
       - bullet: "External reviewer, 9th ACM Workshop on Artificial Intelligence and Security (AISec 2026), 2026"
 
     Awards:
+      - title: 2nd Place, NVIDIA Track
+        awarder: HackUTD 2026
+        authors: ["HackUTD 2026"]
+        date: "2026-11"
+        summary: "TripWir3, table #61; 1,200 hackers and 392 projects reported in the closing slides."
+
       # `authors` duplicates the awarder because RenderCV classifies these entries as publications and requires it; the site ignores it.
-      - title: 2nd Place Overall
+      - title: 2nd Place PNC Bank Track
         awarder: HackUTD 2024 (1,100+ participants; the largest hackathon in Texas)
         authors: ["HackUTD 2024 (1,100+ participants; the largest hackathon in Texas)"]
         date: "2024-11"
@@ -182,6 +189,14 @@ cv:
         date: "2021"
         summary: Merit-based, for outstanding academic performance (9.46/10 CGPA), academic year 2020–21.
     Projects:
+      - name: TripWir3
+        date: "2026-11"
+        url: https://themukherjee.com/projects/tripwir3/
+        summary: "HackUTD 2026: 2nd Place, NVIDIA Track."
+        highlights:
+          - "TripWir3 checks open-weight Low-Rank Adaptation (LoRA) adapters for sleeper backdoors before deployment."
+          - "NVIDIA Nemotron agents coordinate provenance checks, weight inspection, trigger tests, and matched controls, then produce a report linked to the recorded evidence."
+
       # TODO(confirm): add `url` fields for the GitHub repositories / project links once decided
       - name: Activation Steering for Smart Contract Vulnerability Detection
         start_date: "2025"
@@ -210,7 +225,7 @@ cv:
 
       - name: Data Pattern Observatory
         date: "2024-11"
-        summary: "HackUTD 2024: 2nd Place Overall."
+        summary: "HackUTD 2024: 2nd Place PNC Bank Track."
         highlights:
           - "End-to-end data observability system for the PNC Bank challenge that visualizes data-flow patterns and flags anomalies with 85%+ accuracy across an organization"
           - "Containerized microservices with a Streamlit front end"
@@ -229,13 +244,15 @@ cv:
 
     Skills:
       - name: Deep learning tools/frameworks
-        keywords: [PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Lightning, Scikit-Learn, Keras, OpenCV, Spark MLlib]
+        keywords: [PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Lightning, Scikit-Learn, Keras, OpenCV, Spark MLlib, PEFT, Safetensors]
       - name: Programming languages
-        keywords: [Python, C, C++, Swift, SwiftUI, Fortran, SQL, Bash, LaTeX, MATLAB]
+        keywords: [Python, C, C++, Swift, SwiftUI, Fortran, SQL, Bash, LaTeX, MATLAB, JavaScript, HTML, CSS]
       - name: HPC and parallel computing
         keywords: [NVIDIA CUDA, OpenMP, MPI, SLURM, CuPy, high-throughput computing]
       - name: Big data and cloud
         keywords: [Apache Spark, Kafka, MongoDB, Redis, Elasticsearch, Docker, "AWS (EC2, S3)"]
+      - name: Web and scientific Python
+        keywords: [FastAPI, Uvicorn, pytest]
       - name: Development tools
         keywords: [Git/GitHub, GitLab, Docker, "CI/CD (Jenkins)", Postman, SonarQube, GDB, Perf, JIRA]
       - name: Operating systems / systems

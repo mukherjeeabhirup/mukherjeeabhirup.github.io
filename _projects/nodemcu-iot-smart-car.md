@@ -2,8 +2,11 @@
 layout: page
 title: NodeMCU WiFi-Controlled IoT Smart Car
 description: SRM Institute of Science and Technology, July 2021
-img:
-importance: 3
+img: assets/img/update-1113/car-chassis.webp
+thumbnail_alt: "Four-wheel robot car chassis with motors and controller."
+summary: "A WiFi-controlled smart car built on an ESP8266 WiFi SoC with an L298N motor driver."
+thumbnail_height: 800
+importance: 4
 category: fun
 ---
 

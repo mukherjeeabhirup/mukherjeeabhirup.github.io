@@ -2,8 +2,11 @@
 layout: page
 title: Mars Lander Simulation Game
 description: NASA Space Apps Challenge, October 2021
-img:
-importance: 2
+img: assets/img/update-1113/mars-landing.webp
+thumbnail_alt: "Mars lander presentation slide: Survive 10 minutes of Terror."
+summary: "A Mars lander simulation game built for the NASA Space Apps Challenge."
+thumbnail_height: 455
+importance: 3
 category: fun
 github: https://github.com/mukherjeeabhirup/TeamMarooned5
 ---

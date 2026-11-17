@@ -2,7 +2,9 @@
 layout: page
 title: Activation Steering for Smart Contract Vulnerability Detection
 description: UT Dallas, 2025-2026
-img:
+img: assets/img/publication_preview/activation-steering-method.svg
+thumbnail_alt: "Activation steering methodology diagram."
+summary: "Steering vectors were computed and applied at inference time, without fine-tuning, and then evaluated for six LLMs on an 11-class Solidity vulnerability classification task."
 importance: 1
 category: research
 ---
