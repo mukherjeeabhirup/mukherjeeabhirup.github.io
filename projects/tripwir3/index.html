@@ -1,0 +1,197 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> TripWir3 | Abhirup Mukherjee </title> <meta name="author" content="Abhirup Mukherjee"> <meta name="description" content="HackUTD, 2026 — 2nd Place NVIDIA Track"> <meta name="keywords" content="LLM interpretability, activation steering, representation engineering, vulnerability detection, program repair, smart contract security, Solidity, adversarial machine learning, trustworthy AI, agentic AI security, high-performance computing"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%91%8B%F0%9F%8F%BC&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://themukherjee.com/projects/tripwir3/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Abhirup</span> Mukherjee </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">research and projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/service/">service </a> </li> <li class="nav-item "> <a class="nav-link" href="/assets/pdf/abhirup_mukherjee_cv.pdf">cv </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">TripWir3</h1> <p class="post-description">HackUTD, 2026 — 2nd Place NVIDIA Track</p> </header> <article> <p><a href="https://devpost.com/software/test-l3i74h" rel="external nofollow noopener" target="_blank">Devpost</a> · <a href="https://github.com/mukherjeeabhirup/tripwir3" rel="external nofollow noopener" target="_blank">GitHub</a> · <a href="https://www.youtube.com/watch?v=vPMd6Ijjr3M" rel="external nofollow noopener" target="_blank">Demo video</a></p> <p>TripWir3 audits a target third-party base model with an adapter attached to it, at a chosen risk tier (low, standard, or critical), using provenance checks, LoRA weight forensics, and paired trigger tests. The audit is done by the Investigator, Skeptic, and Report agents running NVIDIA Nemotron™ that pass their respective verdicts grounded in the output logs of the model. Every audit ends in QUARANTINE, FLAG, PASS, or INCOMPLETE, and any and all failures are marked as INCOMPLETE. Built for the NVIDIA challenge at HackUTD 2026.</p> <p>A FastAPI backend streams every step to an observation dashboard, and every tool call is logged so all the claims are grounded in the log outputs.</p> <style>
+  .tripwir3-dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .tripwir3-dashboard-grid figure {
+    margin: 0;
+  }
+
+  .tripwir3-dashboard-grid a {
+    display: block;
+    aspect-ratio: 8 / 5;
+  }
+
+  .tripwir3-dashboard-grid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 576px) {
+    .tripwir3-dashboard-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style> <div class="tripwir3-dashboard-grid"> <figure> <a href="/assets/img/update-1113/tripwir3-01-overview-verdict.webp"> <img src="/assets/img/update-1113/tripwir3-01-overview-verdict.webp" alt="Recorded completed audit overview and quarantine verdict from the GitHub README." class="img-fluid rounded" loading="lazy"> </a> </figure> <figure> <a href="/assets/img/update-1113/tripwir3-devpost-trace.webp"> <img src="/assets/img/update-1113/tripwir3-devpost-trace.webp" alt="Recorded agent trace and tool evidence from the Devpost gallery." class="img-fluid rounded" loading="lazy"> </a> </figure> <figure> <a href="/assets/img/update-1113/tripwir3-04-evidence.webp"> <img src="/assets/img/update-1113/tripwir3-04-evidence.webp" alt="Stored trigger and control prompt verification results from the GitHub README." class="img-fluid rounded" loading="lazy"> </a> </figure> <figure> <a href="/assets/img/update-1113/tripwir3-03-outputs-marker.webp"> <img src="/assets/img/update-1113/tripwir3-03-outputs-marker.webp" alt="Saved discovery output with marker highlight from the GitHub README." class="img-fluid rounded" loading="lazy"> </a> </figure> </div> <h2 id="hackutd-2026-photos">HackUTD 2026 photos</h2> <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 8rem), 1fr)); gap: 1rem; align-items: center; max-width: 33rem; margin: 0 auto;"> <a href="/assets/img/update-1117/tripwir3-photos/1.webp"> <img src="/assets/img/update-1117/tripwir3-photos/1.webp" alt="HackUTD ZeroDay stage lit in purple in front of the audience." class="img-fluid rounded" width="1200" height="900" loading="lazy"> </a> <a href="/assets/img/update-1117/tripwir3-photos/2.webp"> <img src="/assets/img/update-1117/tripwir3-photos/2.webp" alt="HackUTD 2026 closing slide reporting 1,200 hackers and 392 projects." class="img-fluid rounded" width="900" height="1200" loading="lazy"> </a> <a href="/assets/img/update-1117/tripwir3-photos/3.webp"> <img src="/assets/img/update-1117/tripwir3-photos/3.webp" alt="TripWir3's second-place award and table number projected above the stage." class="img-fluid rounded" width="900" height="1200" loading="lazy"> </a> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Abhirup Mukherjee. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-research-and-projects",
+          title: "research and projects",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-service",
+          title: "service",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/service/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "Curriculum vitae of Abhirup Mukherjee (last updated November 2026).",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "news-i-graduated-with-my-master-s-in-computer-science-from-utd-after-defending-my-thesis-activation-steering-for-smart-contract-vulnerability-detection-huge-thanks-to-my-advisor-prof-latifur-khan-and-committee-members-prof-sergey-bereg-and-prof-yapeng-tian",
+          title: 'I graduated with my master’s in computer science from UTD after defending my...',
+          description: "",
+          section: "News",},{id: "news-my-first-first-author-paper-activation-steering-for-smart-contract-vulnerability-detection-a-calibration-mechanism-bounded-by-pre-training-knowledge-got-accepted-at-the-2026-ieee-international-conference-on-intelligence-and-security-informatics-isi-which-was-held-during-august-12-14-2026-in-cambridge-united-kingdom-huge-thanks-to-my-co-authors-prof-latifur-khan-and-prof-bhavani-thuraisingham-for-their-contributions-support-and-guidance",
+          title: 'My first first-author paper “Activation Steering for Smart Contract Vulnerability Detection: A Calibration...',
+          description: "",
+          section: "News",},{id: "news-thrilled-to-start-as-a-computer-science-ph-d-student-and-graduate-research-assistant-in-the-department-of-computer-science-advised-by-prof-blaine-hoak",
+          title: 'Thrilled to start as a computer science Ph.D. student and Graduate Research Assistant...',
+          description: "",
+          section: "News",},{id: "news-i-presented-my-activation-steering-work-as-a-poster-at-the-texas-security-workshop-2026-and-the-comet-computing-conference-2026-at-utd",
+          title: 'I presented my activation-steering work as a poster at the Texas Security Workshop...',
+          description: "",
+          section: "News",},{id: "news-my-project-tripwir3-won-2nd-place-in-the-nvidia-track-at-hackutd-2026-zeroday",
+          title: 'My project TripWir3 won 2nd place in the NVIDIA track at HackUTD 2026:...',
+          description: "",
+          section: "News",},{id: "projects-activation-steering-for-smart-contract-vulnerability-detection",
+          title: 'Activation Steering for Smart Contract Vulnerability Detection',
+          description: "UT Dallas, 2025-2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/activation-steering/";
+            },},{id: "projects-data-pattern-observatory",
+          title: 'Data Pattern Observatory',
+          description: "HackUTD, 2024 — 2nd Place PNC Bank Track",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/data-pattern-observatory/";
+            },},{id: "projects-mars-lander-simulation-game",
+          title: 'Mars Lander Simulation Game',
+          description: "NASA Space Apps Challenge, October 2021",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mars-lander-simulation-game/";
+            },},{id: "projects-nodemcu-wifi-controlled-iot-smart-car",
+          title: 'NodeMCU WiFi-Controlled IoT Smart Car',
+          description: "SRM Institute of Science and Technology, July 2021",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/nodemcu-iot-smart-car/";
+            },},{id: "projects-single-image-3d-reconstruction-pipeline",
+          title: 'Single-Image 3D Reconstruction Pipeline',
+          description: "SRM Institute of Science and Technology, 2022",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/single-image-3d-reconstruction/";
+            },},{id: "projects-tripwir3",
+          title: 'TripWir3',
+          description: "HackUTD, 2026 — 2nd Place NVIDIA Track",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/tripwir3/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%61%62%68%69%72%75%70.%6D%75%6B%68%65%72%6A%65%65@%75%74%64%61%6C%6C%61%73.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/mukherjeeabhirup", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/mukherjeeabhirup", "_blank");
+        },
+      },{
+        id: 'social-x',
+        title: 'X',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://x.com/abhirup_muk", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=kEWrlzYAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/abhirup_mukherjee_cv.pdf", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
