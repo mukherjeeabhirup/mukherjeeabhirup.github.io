@@ -23,7 +23,7 @@ latest_posts:
 
 Hello and welcome to my page!
 
-I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UTD), working with Prof. [Blaine Hoak](https://hoak.me/) as a Graduate Research Assistant on problems at the intersection of adversarial machine learning and computer security. Broadly, I'm interested in interpretable and robust AI models in security-critical applications.
+I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UTD), working with Prof. [Blaine Hoak](https://hoak.me/) in the [IRIS Lab](https://theirisresearchlab.com/) (Intelligent systems Robustness, Interpretability, and Security) as a Graduate Research Assistant on problems at the intersection of adversarial machine learning and computer security. Broadly, I'm interested in interpretable and robust AI models in security-critical applications.
 
 Previously, I earned my master's in Computer Science from UTD while working a part-time, on-campus student assistant job at UTD's [high performance computing center](https://hpc.utdallas.edu/). And prior to that, I was a product development engineer at Comviva Technologies. Before venturing out into the industry, I earned my bachelor's in Electronics and Communication Engineering (ECE) from SRM Institute of Science and Technology.
 
