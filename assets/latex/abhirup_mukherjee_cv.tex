@@ -6,7 +6,6 @@
 \usepackage{titlesec}
 \usepackage{fontawesome5}
 \usepackage{xcolor}
-\usepackage{needspace}
 \usepackage{ragged2e}
 \usepackage{tabularx}
 
@@ -27,29 +26,26 @@
 \pagenumbering{gobble}
 \linespread{0.96}
 \setlength{\parindent}{0pt}
-\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+% Keep each entry heading with the start of its list.
+\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=2pt,parsep=0pt,partopsep=0pt,beginpenalty=10000}
 \setlength{\emergencystretch}{1em}
 \raggedbottom
 \clubpenalty=10000
 \widowpenalty=10000
-\let\cvsection\section
-\renewcommand{\section}{\Needspace{7\baselineskip}\cvsection}
 \newsavebox{\cvheadingbox}
 \newsavebox{\cvdatebox}
 
 \newcommand{\educationitem}[4]{%
-    \Needspace{5\baselineskip}%
-    \textbf{#1} \hfill \textbf{#2}\\
+    \textbf{#1} \hfill \textbf{#2}\\*
     #3 \hfill #4
 }
 \newcommand{\experienceitem}[3]{%
-    \Needspace{5\baselineskip}%
     \sbox{\cvheadingbox}{\textbf{#1}, \textit{#2}}%
     \sbox{\cvdatebox}{\textbf{#3}}%
     \ifdim\dimexpr\wd\cvheadingbox+\wd\cvdatebox+1em\relax<\linewidth
         \usebox{\cvheadingbox}\hfill\usebox{\cvdatebox}%
     \else
-        \textbf{#1}\hfill\usebox{\cvdatebox}\\
+        \textbf{#1}\hfill\usebox{\cvdatebox}\\*
         \textit{#2}%
     \fi
 }
@@ -68,7 +64,7 @@
 \end{center}
 
 \section*{Research Interests}
-I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UTD), working with Prof.\ \blackhref{https://hoak.me/}{Blaine Hoak} as a Graduate Research Assistant on problems at the intersection of adversarial machine learning and computer security. Broadly, I'm interested in interpretable and robust AI models in security-critical applications.
+I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UTD), working with Prof.\ \blackhref{https://hoak.me/}{Blaine Hoak} in the \blackhref{https://theirisresearchlab.com/}{IRIS Lab} (Intelligent systems Robustness, Interpretability, and Security) as a Graduate Research Assistant on problems at the intersection of adversarial machine learning and computer security. Broadly, I'm interested in interpretable and robust AI models in security-critical applications.
 
 \section*{Education}
 \educationitem{The University of Texas at Dallas}{August 2026 - Present}{Doctor of Philosophy in Computer Science}{Richardson, TX}
@@ -107,7 +103,7 @@ I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UT
     \item Advised by Dr.\ \blackhref{https://hoak.me/}{Blaine Hoak}; working at the intersection of adversarial machine learning and computer security.
 \end{itemize}
 \vspace{2pt}
-\experienceitem{Master's Thesis Research}{The University of Texas at Dallas}{August 2025 - May 2026}\\
+\experienceitem{Master's Thesis Research}{The University of Texas at Dallas}{August 2025 - May 2026}\\*
 \textit{Advisor: Dr.\ \blackhref{https://personal.utdallas.edu/~lkhan/}{Latifur Khan}} \quad
 \href{https://themukherjee.com/projects/activation-steering/}{[Project]}
 \begin{itemize}
@@ -117,7 +113,7 @@ I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UT
     \item Replicated and evaluated VulnPatch using \textit{QLoRA fine-tuning} of CodeLlama on multi-GPU HPC clusters, identifying failure modes including mode collapse on small datasets and insufficient Solidity competence in the base model.
 \end{itemize}
 \vspace{2pt}
-\experienceitem{Undergraduate Researcher}{SRM Institute of Science and Technology}{May 2022 - October 2022}\\
+\experienceitem{Undergraduate Researcher}{SRM Institute of Science and Technology}{May 2022 - October 2022}\\*
 \textit{Advisor: Dr.\ \blackhref{https://www.linkedin.com/in/prof-dr-t-rama-rao-50197a93/}{T. Rama Rao}} \quad
 \href{https://themukherjee.com/projects/single-image-3d-reconstruction/}{[Project]}
 \begin{itemize}
@@ -155,7 +151,7 @@ I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UT
 \end{itemize}
 
 \section*{Selected Projects}
-\experienceitem{\blackhref{https://themukherjee.com/projects/tripwir3/}{TripWir3 - HackUTD 2026}}{2nd Place, NVIDIA Track}{November 2026}\\
+\experienceitem{\blackhref{https://themukherjee.com/projects/tripwir3/}{TripWir3 - HackUTD 2026}}{2nd Place, NVIDIA Track}{November 2026}\\*
 \href{https://github.com/mukherjeeabhirup/tripwir3}{[Code]} \quad
 \href{https://devpost.com/software/test-l3i74h}{[Devpost]} \quad
 \href{https://www.youtube.com/watch?v=vPMd6Ijjr3M}{[Demo]}
@@ -164,7 +160,7 @@ I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UT
     \item NVIDIA Nemotron agents coordinate provenance checks, weight inspection, trigger tests, and matched controls, then produce a report linked to the recorded evidence.
 \end{itemize}
 \vspace{2pt}
-\experienceitem{\blackhref{https://themukherjee.com/projects/data-pattern-observatory/}{Data Pattern Observatory - HackUTD 2024}}{2nd Place PNC Bank Track}{November 2024}\\
+\experienceitem{\blackhref{https://themukherjee.com/projects/data-pattern-observatory/}{Data Pattern Observatory - HackUTD 2024}}{2nd Place PNC Bank Track}{November 2024}\\*
 \href{https://github.com/mukherjeeabhirup/data-observability-hackutd}{[Code]} \quad
 \href{https://devpost.com/software/data-pattern-observatory}{[Devpost]}
 \begin{itemize}
@@ -172,7 +168,7 @@ I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UT
     \item Architected a full-stack data processing pipeline using \textit{Python}, \textit{MongoDB}, \textit{Redis}, \textit{Elasticsearch}, and \textit{Docker}-containerized microservices with a \textit{Streamlit} front end.
 \end{itemize}
 \vspace{2pt}
-\experienceitem{\blackhref{https://themukherjee.com/projects/mars-lander-simulation-game/}{Mars Lander Simulation Game}}{NASA Space Apps Challenge}{October 2021}\\
+\experienceitem{\blackhref{https://themukherjee.com/projects/mars-lander-simulation-game/}{Mars Lander Simulation Game}}{NASA Space Apps Challenge}{October 2021}\\*
 \href{https://github.com/mukherjeeabhirup/TeamMarooned5}{[Code]} \quad
 \href{https://2021.spaceappschallenge.org/challenges/statements/planetary-lander-video-game/teams/marooned5/project/}{[Link]} \quad
 \href{https://themukherjee.com/assets/pdf/marooned-5-slides.pdf}{[Slides]}
@@ -180,7 +176,7 @@ I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UT
     \item Led ideation and development of a Mars lander simulation game in a team of five; placed 2nd locally and was selected as a global nominee among thousands of international submissions.
 \end{itemize}
 \vspace{2pt}
-\experienceitem{\blackhref{https://themukherjee.com/projects/nodemcu-iot-smart-car/}{NodeMCU WiFi-Controlled IoT Smart Car}}{SRM Institute of Science and Technology}{July 2021}\\
+\experienceitem{\blackhref{https://themukherjee.com/projects/nodemcu-iot-smart-car/}{NodeMCU WiFi-Controlled IoT Smart Car}}{SRM Institute of Science and Technology}{July 2021}\\*
 \href{https://themukherjee.com/assets/video/nodemcu-smart-car-web.mp4}{[Demo]}
 \begin{itemize}
     \item Designed and implemented an \textit{embedded system} for a remote-controlled vehicle using an \textit{ESP8266 WiFi SoC} and \textit{L298N} motor driver.
