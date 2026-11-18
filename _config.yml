@@ -7,19 +7,19 @@ first_name: Abhirup
 middle_name:
 last_name: Mukherjee
 contact_note: # TODO: optional one-line note shown under the social icons (e.g. which channel you prefer); left blank because the content doc does not state one
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal academic website of Abhirup Mukherjee, a Computer Science PhD student at The University of Texas at Dallas
-  working on interpretable and robust AI systems for security-critical applications: how large language models
-  represent vulnerability knowledge, activation steering, automated vulnerability detection and repair, and the
-  security and trustworthiness of agentic AI.
+description: >-
+  I'm a Ph.D. student in Computer Science at The University of Texas at Dallas (UTD), working with Prof. Blaine Hoak in
+  the IRIS Lab (Intelligent systems Robustness, Interpretability, and Security) as a Graduate Research Assistant on
+  problems at the intersection of adversarial machine learning and computer security. Broadly, I'm interested in
+  interpretable and robust AI models in security-critical applications.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: LLM interpretability, activation steering, representation engineering, vulnerability detection, program repair, smart contract security, Solidity, adversarial machine learning, trustworthy AI, agentic AI security, high-performance computing
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 timezone: America/Chicago # build-time timezone, so news dates render the same locally and on GitHub Actions
-icon: 👋🏼 # waving hand emoji favicon
-apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
+icon: utd-logo.svg
+apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG. Leave empty to use the default iOS behavior.
 
 # A GitHub Pages *user* site must live in a repo named <github-username>.github.io (here: mukherjeeabhirup.github.io).
 # If you rename the account or add a custom domain, change `url` here (and keep `baseurl` empty).

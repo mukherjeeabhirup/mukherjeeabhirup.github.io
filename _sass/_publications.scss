@@ -81,7 +81,7 @@
 
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          border-bottom: 1px dashed var(--link-state-color, var(--global-theme-color));
 
           &:hover {
             border-bottom-style: solid;
@@ -130,6 +130,11 @@
         }
         a.award.btn {
           border-color: var(--global-highlight-color);
+        }
+
+        a.btn:any-link:is(:hover, :focus-visible) {
+          color: var(--link-state-color);
+          border-color: var(--link-state-color);
         }
       }
 

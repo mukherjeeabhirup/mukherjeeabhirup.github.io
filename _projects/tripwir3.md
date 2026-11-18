@@ -86,4 +86,10 @@ A FastAPI backend streams every step to an observation dashboard, and every tool
   <a href="{{ '/assets/img/update-1117/tripwir3-photos/3.webp' | relative_url }}">
     <img src="{{ '/assets/img/update-1117/tripwir3-photos/3.webp' | relative_url }}" alt="TripWir3's second-place award and table number projected above the stage." class="img-fluid rounded" width="900" height="1200" loading="lazy">
   </a>
+  <a href="{{ '/assets/img/update-1117/tripwir3-photos/badge.webp' | relative_url }}">
+    <img src="{{ '/assets/img/update-1117/tripwir3-photos/badge.webp' | relative_url }}" alt="Abhirup’s HackUTD XIII hacker badge." class="img-fluid rounded" width="900" height="1200" loading="lazy">
+  </a>
+  <a href="{{ '/assets/img/update-1117/tripwir3-photos/lamp.webp' | relative_url }}">
+    <img src="{{ '/assets/img/update-1117/tripwir3-photos/lamp.webp' | relative_url }}" alt="A glowing cat-shaped lamp." class="img-fluid rounded" width="900" height="1200" loading="lazy">
+  </a>
 </div>

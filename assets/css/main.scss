@@ -1,0 +1,101 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{site.max_width | default: "930px"}}
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+/* Link and navigation colors adapted from the IRIS Lab palette. */
+:root {
+  --content-link-color: #9a3412;
+  --content-link-hover-color: #7c2d12;
+}
+
+html[data-theme="dark"] {
+  --content-link-color: #8fc1a9;
+  --content-link-hover-color: #b5d9c6;
+}
+
+[role="main"] {
+  // The about layout gives its section links an inline neutral color.
+  a:any-link:not(:where(h2 > a[style="color: inherit"])) {
+    --link-state-color: var(--content-link-color);
+
+    &:not(.btn) {
+      color: var(--link-state-color);
+    }
+
+    &:is(:hover, :focus-visible) {
+      --link-state-color: var(--content-link-hover-color);
+      color: var(--link-state-color);
+    }
+
+    &:focus-visible {
+      outline-color: var(--content-link-color);
+    }
+  }
+
+  .contact-icons a:any-link i::before {
+    color: var(--link-state-color);
+  }
+}
+
+footer.fixed-bottom a:any-link {
+  &:is(:hover, :focus-visible) {
+    background-color: var(--global-bg-color);
+    color: var(--content-link-hover-color);
+  }
+
+  &:focus-visible {
+    outline-color: var(--global-footer-link-color);
+  }
+}
+
+#navbar {
+  .navbar-nav .nav-item.active > a.nav-link {
+    color: var(--content-link-color);
+  }
+
+  :is(a.nav-link, #search-toggle, #light-toggle):is(:hover, :focus-visible) {
+    color: var(--content-link-hover-color);
+
+    .nav-link,
+    i,
+    i::before,
+    i::after {
+      color: inherit;
+    }
+
+    &:focus-visible {
+      outline-color: var(--content-link-color);
+    }
+  }
+}
