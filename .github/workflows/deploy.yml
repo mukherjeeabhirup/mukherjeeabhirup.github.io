@@ -103,6 +103,29 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Version main.css from its published contents
+        run: |
+          python3 - <<'PY'
+          import re
+          from hashlib import sha256
+          from pathlib import Path
+
+          site = Path("_site")
+          version = sha256((site / "assets/css/main.css").read_bytes()).hexdigest()
+          stylesheet = re.compile(rb'(<link rel="stylesheet" href="/assets/css/main\.css\?v=)[0-9a-f]+(?=")')
+
+          matched = 0
+          for page in site.rglob("*.html"):
+              html = page.read_bytes()
+              updated, count = stylesheet.subn(rb"\g<1>" + version.encode("ascii"), html)
+              matched += count
+              if updated != html:
+                  page.write_bytes(updated)
+
+          if not matched:
+              raise SystemExit("No main.css stylesheet references found in _site HTML")
+          print(f"Versioned {matched} main.css stylesheet references with {version}")
+          PY
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4

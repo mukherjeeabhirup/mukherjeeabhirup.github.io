@@ -33,69 +33,140 @@
 @use "teachings";
 @use "typograms";
 
-/* Link and navigation colors adapted from the IRIS Lab palette. */
+/* Use the same palette for Sass, the bundled Tailwind styles, and plugins. */
 :root {
-  --content-link-color: #9a3412;
-  --content-link-hover-color: #7c2d12;
+  --global-theme-color: #9a3412;
+  --global-hover-color: #7c2d12;
 }
 
 html[data-theme="dark"] {
-  --content-link-color: #8fc1a9;
-  --content-link-hover-color: #b5d9c6;
+  --global-theme-color: #8fc1a9;
+  --global-hover-color: #b5d9c6;
 }
 
-[role="main"] {
-  // The about layout gives its section links an inline neutral color.
-  a:any-link:not(:where(h2 > a[style="color: inherit"])) {
-    --link-state-color: var(--content-link-color);
+:root,
+html[data-theme="dark"] {
+  // Filled controls need a readable foreground on either accent color.
+  --global-hover-text-color: var(--global-bg-color);
+}
 
-    &:not(.btn) {
-      color: var(--link-state-color);
-    }
-
-    &:is(:hover, :focus-visible) {
-      --link-state-color: var(--content-link-hover-color);
-      color: var(--link-state-color);
-    }
-
-    &:focus-visible {
-      outline-color: var(--content-link-color);
-    }
-  }
-
-  .contact-icons a:any-link i::before {
-    color: var(--link-state-color);
+// The Sass theme uses the resting accent for hover in these contexts.
+a,
+table.table a,
+footer.fixed-bottom a {
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: var(--global-hover-color);
   }
 }
 
-footer.fixed-bottom a:any-link {
-  &:is(:hover, :focus-visible) {
-    background-color: var(--global-bg-color);
-    color: var(--content-link-hover-color);
-  }
+// The gem's about layout sets its section links to inherit via inline styles.
+.post > article > h2 > a {
+  color: var(--global-theme-color) !important;
 
-  &:focus-visible {
-    outline-color: var(--global-footer-link-color);
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: var(--global-hover-color) !important;
   }
+}
+
+a:focus-visible,
+.calendar-toggle-btn:focus-visible,
+.af-table-search:focus-visible,
+.af-table-pagination button:focus-visible,
+#navbar .navbar-toggler:focus-visible,
+#navbar #search-toggle:focus-visible,
+#navbar #light-toggle:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 2px;
+}
+
+.social .contact-icons a i::before,
+.social .contact-icons a:hover i::before,
+#navbar .navbar-brand.social a i::before {
+  color: inherit;
+}
+
+footer.fixed-bottom {
+  // Give the link colors a matching surface across the full footer.
+  --global-footer-bg-color: var(--global-card-bg-color);
+  --global-footer-text-color: var(--global-text-color);
+  --global-footer-link-color: var(--global-theme-color);
+  box-shadow: inset 0 1px 0 var(--global-divider-color);
 }
 
 #navbar {
-  .navbar-nav .nav-item.active > a.nav-link {
-    color: var(--content-link-color);
-  }
-
-  :is(a.nav-link, #search-toggle, #light-toggle):is(:hover, :focus-visible) {
-    color: var(--content-link-hover-color);
-
-    .nav-link,
-    i,
-    i::before,
-    i::after {
-      color: inherit;
-    }
-
-    &:focus-visible {
-      outline-color: var(--content-link-color);
+  a.nav-link,
+  a.navbar-brand,
+  .navbar-toggler,
+  #search-toggle,
+  #light-toggle {
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: var(--global-hover-color);
     }
   }
+
+  a.navbar-brand > span,
+  #search-toggle .nav-link,
+  #light-toggle i::before,
+  #light-toggle i::after {
+    color: inherit;
+  }
+
+  .navbar-toggler {
+    &:hover .icon-bar,
+    &:focus-visible .icon-bar,
+    &:active .icon-bar {
+      background-color: var(--global-hover-color);
+    }
+  }
+}
+
+.dropdown-menu .dropdown-item {
+  &.active,
+  &:hover,
+  &:focus-visible,
+  &:active {
+    background-color: color-mix(in srgb, var(--global-theme-color) 10%, var(--global-bg-color));
+  }
+
+  &.active {
+    color: var(--global-theme-color) !important;
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    // The theme uses an important foreground on active dropdown entries.
+    color: var(--global-hover-color) !important;
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+}
+
+::highlight(search) {
+  color: var(--global-hover-text-color);
+}
+
+ninja-keys {
+  --ninja-text-color: var(--global-theme-color);
+  --ninja-selected-text-color: var(--global-hover-color);
+  --ninja-selected-background: color-mix(in srgb, var(--global-theme-color) 10%, var(--global-bg-color));
+  --ninja-secondary-text-color: color-mix(in srgb, var(--global-text-color) 70%, var(--global-bg-color));
+  --ninja-group-text-color: var(--ninja-secondary-text-color);
+  --ninja-placeholder-color: var(--ninja-secondary-text-color);
+}
+
+ninja-keys::part(ninja-input) {
+  color: var(--global-text-color);
+}
+
+ninja-keys::part(ninja-selected) {
+  --ninja-accent-color: var(--global-hover-color);
 }
